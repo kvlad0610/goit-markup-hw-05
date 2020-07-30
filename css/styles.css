@@ -55,6 +55,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -82,6 +84,7 @@ img {
 
 .logo {
   display: block;
+
   font-family: var(--logo-font-family);
   font-weight: 700;
   font-size: 26px;
@@ -119,6 +122,8 @@ img {
   padding-bottom: 32px;
 
   color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-list .navigation-link:hover,
@@ -163,12 +168,14 @@ img {
   display: inline-flex;
   align-items: center;
 
-  color: var(--primery-text-color);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address .address-text {
@@ -241,6 +248,7 @@ img {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
     url(../images/Header.jpg);
   background-repeat: no-repeat;
@@ -251,10 +259,10 @@ img {
 .hero-title {
   margin-top: 0px;
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primery-white-color);
@@ -274,6 +282,7 @@ img {
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -304,6 +313,7 @@ img {
   height: 120px;
   justify-content: center;
   align-items: center;
+
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -353,6 +363,7 @@ img {
 .features-title {
   margin-top: 0mm;
   margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -417,6 +428,7 @@ img {
   width: calc((100% - 90px) / 4);
   text-align: center;
   padding-bottom: 24px;
+
   background: var(--primery-white-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -434,6 +446,7 @@ img {
 .team-name {
   margin: 0;
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -443,6 +456,7 @@ img {
 .team-position {
   margin-top: 0;
   margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.18;
 }
@@ -464,9 +478,13 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
+
   color: var(--primery-white-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team .social-link {
@@ -507,6 +525,9 @@ img {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-img {
@@ -524,8 +545,7 @@ img {
 .button {
   display: inline-flex;
   padding: 10px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   min-width: 200px;
   font-family: var(--primery-font-family);
   font-style: normal;
@@ -536,6 +556,8 @@ img {
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--primery-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -582,6 +604,7 @@ img {
 .a-call-subtitle {
   display: block;
   margin-bottom: 20px;
+
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primery-white-color);
@@ -640,6 +663,10 @@ img {
   letter-spacing: 0.03em;
   background: #f5f4fa;
   color: var(--title-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -660,11 +687,12 @@ img {
 }
 
 .working-item {
-  background: var(--primery-white-color);
-
   width: 370px;
   /* width: calc((100% - 60px) / 3); */
   /* padding-bottom: 20px; */
+  background: var(--primery-white-color);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .working-item:hover,
@@ -743,6 +771,5 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition-duration: 1000ms;
-  transition-timing-function: linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
